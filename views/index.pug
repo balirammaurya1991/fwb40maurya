@@ -2,4 +2,13 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to #{title} web apps
+  button(type="button", class="btn btn-secondary", onclick="update()") Press me 
+  div(id="target")
+  script. 
+       var client_count = 0
+       function update(){  
+          //console.log("***************************")
+          client_count = client_count+1
+          document.getElementById("target").innerHTML = client_count
+          }
