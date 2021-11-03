@@ -2,4 +2,12 @@ extends layout
 
 block content
  h1= title
+ div(class="container-fluid ")  
+  
+      each item, key in university
+         div(class="row")
+            div(class="col-sm-2") #{item.university_name}
+            div(class="col-sm-2") #{item.university_location}
+            div(class="col-sm-2") #{item.university_type}
+      
   
